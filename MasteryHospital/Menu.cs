@@ -8,11 +8,10 @@ namespace MasteryHospital
     {
         public void Start()
         {
-            Doctors doctors = new Doctors();
-            Nurses nurses = new Nurses();
-            Janitor janitor = new Janitor();
-            Receptionist receptionist = new Receptionist();
-            Patients patients = new Patients();
+
+
+            Employees employees = new Employees();
+            employees.CreateEmployees();
 
         }
     }

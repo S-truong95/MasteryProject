@@ -4,15 +4,15 @@ using System.Text;
 
 namespace MasteryHospital
 {
-    class Patients
+    public class Patients
     {
-        int health { get; set; }
-        int blood { get; set; }
+        public int health { get; set; }
+        public int blood { get; set; }
 
         public Patients()
         {
-            this.health = 10;
-            this.blood = 20;
+            health = 50;
+            blood = 60;
         }
     }
 }
