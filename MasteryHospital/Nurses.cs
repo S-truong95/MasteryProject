@@ -13,13 +13,13 @@ namespace MasteryHospital
         }
         public override void PatientCare(Patients patients)
         {
-            patients.health++;
+            patients.health += 10;
             Console.WriteLine("Patient current health : " + patients.health);
         }
         public override void BloodDraw(Patients patients)
         {
-            patients.blood -= 2;
-            Console.WriteLine("Patient current blood level : " + patients.blood);
+            patients.bloodLevel -= 20;
+            Console.WriteLine("Patient current blood level : " + patients.bloodLevel);
         }
 
     }

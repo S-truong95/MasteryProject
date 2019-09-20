@@ -7,12 +7,12 @@ namespace MasteryHospital
     public class Patients
     {
         public int health { get; set; }
-        public int blood { get; set; }
+        public int bloodLevel { get; set; }
 
         public Patients()
         {
             health = 50;
-            blood = 60;
+            bloodLevel = 60;
         }
     }
 }
