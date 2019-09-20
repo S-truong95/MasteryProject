@@ -6,5 +6,13 @@ namespace MasteryHospital
 {
     class Patients
     {
+        int health { get; set; }
+        int blood { get; set; }
+
+        public Patients()
+        {
+            this.health = 10;
+            this.blood = 20;
+        }
     }
 }

@@ -6,7 +6,9 @@ namespace MasteryHospital
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello Welcome to the Hospital!");
+            Menu menu = new Menu();
+            menu.Start();
         }
     }
 }
