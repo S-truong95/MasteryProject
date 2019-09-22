@@ -16,6 +16,8 @@ namespace MasteryHospital
         }
         public void PatientStats()
         {
+            Console.WriteLine("Number of patients: 1");
+            Console.WriteLine();
             Console.WriteLine($"bloodlevel: {bloodLevel}");
             Console.WriteLine($"health: {health}");
         }

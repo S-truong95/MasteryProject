@@ -15,6 +15,7 @@ namespace MasteryHospital
             bool inHospital = true;
             while (inHospital)
             {
+                Console.WriteLine();
                 Console.WriteLine("What would you like to do?");
                 Console.WriteLine();
                 Console.WriteLine("Please select from the following menu:");
