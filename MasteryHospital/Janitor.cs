@@ -6,10 +6,14 @@ namespace MasteryHospital
 {
     class Janitor : Employees
     {
+        public bool sweeping { get; set; }
         public Janitor(string Name, int Number)
         {
-            base.id = Number;
-            base.name = Name;
+            sweeping = false;
+            id = Number;
+            name = Name;
+            pay = false;
+            salary = 40000;
         }
     }
 }

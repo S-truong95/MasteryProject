@@ -6,10 +6,14 @@ namespace MasteryHospital
 {
     class Receptionist : Employees
     {
+        public bool phone {get; set;} 
         public Receptionist(string Name, int Number)
         {
-            base.id = Number;
-            base.name = Name;
+            phone = false;
+            id = Number;
+            name = Name;
+            pay = false;
+            salary = 48000;
         }
     }
 }

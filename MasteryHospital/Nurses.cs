@@ -10,6 +10,8 @@ namespace MasteryHospital
         {
             id = Number;
             name = Name;
+            pay = false;
+            salary = 65000;
         }
         public override void PatientCare(Patients patients)
         {

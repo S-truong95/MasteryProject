@@ -6,10 +6,13 @@ namespace MasteryHospital
 {
     class Doctors : Employees
     {
-        public Doctors(string Name, int Number)
+        public Doctors(string Name, int Number, string Special)
         {
             id = Number;
             name = Name;
+            special = Special;
+            pay = false;
+            salary = 150000;
         }
         public override void PatientCare(Patients patients)
         {
