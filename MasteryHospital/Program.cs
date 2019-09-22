@@ -9,6 +9,8 @@ namespace MasteryHospital
             Console.WriteLine("Hello Welcome to the Hospital!");
             Menu menu = new Menu();
             menu.Start();
+
+            Console.WriteLine("Hope you enjoyed your stay");
         }
     }
 }

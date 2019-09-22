@@ -16,5 +16,20 @@ namespace MasteryHospital
             pay = false;
             salary = 40000;
         }
+        public override void EmployeeInfo()
+        {
+            Random rnd = new Random();
+            int Sweeping = rnd.Next(1, 3);
+            switch (Sweeping)
+            {
+                case 1:
+                    sweeping = false;
+                    break;
+                case 2:
+                    sweeping = true;
+                    break;
+            }
+            Console.WriteLine($"Sweeping: {sweeping}");
+        }
     }
 }

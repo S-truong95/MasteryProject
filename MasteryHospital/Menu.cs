@@ -10,7 +10,7 @@ namespace MasteryHospital
         {
             Employees employees = new Employees();
             employees.CreateEmployees();
-
+            Patients patients = new Patients();
 
             bool inHospital = true;
             while (inHospital)
@@ -21,6 +21,9 @@ namespace MasteryHospital
                 Console.WriteLine("0. to leave Game");
                 Console.WriteLine("1. View all employees");
                 Console.WriteLine("2. Pay employees");
+                Console.WriteLine("3. Patient Care");
+                Console.WriteLine("4. Patient Status");
+                Console.WriteLine("5. Check if employees are working");
                 string input = Console.ReadLine().ToLower();
                 switch (input)
                 {
@@ -39,6 +42,21 @@ namespace MasteryHospital
                         employees.SinglePay();
                         break;
 
+                    case "3":
+                        Console.Clear();
+                        employees.Care(patients);
+                        break;
+
+                    case "4":
+                        Console.Clear();
+                        patients.PatientStats();
+                        break;
+
+                    case "5":
+                        Console.Clear();
+                        employees.EmployeeMenu();
+                        employees.Status();
+                        break;
                     default:
                         Console.WriteLine("Please enter valid response");
                         break;

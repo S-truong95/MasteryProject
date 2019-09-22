@@ -14,5 +14,10 @@ namespace MasteryHospital
             health = 50;
             bloodLevel = 60;
         }
+        public void PatientStats()
+        {
+            Console.WriteLine($"bloodlevel: {bloodLevel}");
+            Console.WriteLine($"health: {health}");
+        }
     }
 }

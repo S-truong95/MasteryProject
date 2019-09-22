@@ -6,6 +6,7 @@ namespace MasteryHospital
 {
     class Nurses : Employees
     {
+        public bool withPatient { get; set; }
         public Nurses(string Name, int Number, string Special)
         {
             special = Special;
@@ -13,16 +14,23 @@ namespace MasteryHospital
             name = Name;
             pay = false;
             salary = 65000;
+            withPatient = false;
         }
-        public override void PatientCare(Patients patients)
+        public override void EmployeeInfo()
         {
-            patients.health += 10;
-            Console.WriteLine("Patient current health : " + patients.health);
-        }
-        public override void BloodDraw(Patients patients)
-        {
-            patients.bloodLevel -= 20;
-            Console.WriteLine("Patient current blood level : " + patients.bloodLevel);
+            Random rnd = new Random();
+            int OnCall = rnd.Next(1, 3);
+            switch (OnCall)
+            {
+                case 1:
+                    withPatient = false;
+                    break;
+                case 2:
+                    withPatient = true;
+                    break;
+            }
+            Console.WriteLine($"With patient: {withPatient}");
+
         }
 
     }
