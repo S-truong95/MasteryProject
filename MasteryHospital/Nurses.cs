@@ -6,8 +6,9 @@ namespace MasteryHospital
 {
     class Nurses : Employees
     {
-        public Nurses(string Name, int Number)
+        public Nurses(string Name, int Number, string Special)
         {
+            special = Special;
             id = Number;
             name = Name;
             pay = false;

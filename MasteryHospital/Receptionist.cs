@@ -7,8 +7,9 @@ namespace MasteryHospital
     class Receptionist : Employees
     {
         public bool phone {get; set;} 
-        public Receptionist(string Name, int Number)
+        public Receptionist(string Name, int Number, string Special)
         {
+            special = Special;
             phone = false;
             id = Number;
             name = Name;

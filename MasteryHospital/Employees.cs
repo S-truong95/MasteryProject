@@ -32,24 +32,30 @@ namespace MasteryHospital
         {
             if (pay == false)
             {
-                Console.WriteLine($"{name} salary is {salary}");
+                Console.WriteLine($"{name} pay is {salary}");
                 pay = true;
             }
             else Console.WriteLine($"{name} has already been paid");
         }
+        public void SinglePay()
+        {
+            Console.WriteLine("\nPlease select a employee from list");
+            Employees employee = employees[Convert.ToInt32(Console.ReadLine()) - 1];
+            employee.PayEmployees();
+        }
         public void CreateEmployees()
         {
-            employees.Add(new Doctors("James Groves", 1212, "Heart"));
-            employees.Add(new Doctors("Jen Evans", 2121, "Brain"));
+            employees.Add(new Doctors("James Groves", 1212, "Heart Surgeon"));
+            employees.Add(new Doctors("Jen Evans", 2222, "Brain Surgeon"));
 
-            employees.Add(new Nurses("Justin Brown", 8888));
-            employees.Add(new Nurses("Ernest Bluford", 8888));
+            employees.Add(new Nurses("Justin Brown", 8888, "Patient care"));
+            employees.Add(new Nurses("Ernest Bluford", 8899, "Patient care"));
 
-            employees.Add(new Receptionist("Taylor Hamphil", 5656));
-            employees.Add(new Receptionist("Mike Mosier", 5656));
+            employees.Add(new Receptionist("Taylor Hamphil", 5656, "Cleaning"));
+            employees.Add(new Receptionist("Mike Mosier", 5643, "CLeaning"));
 
-            employees.Add(new Janitor("Dillon Zetzer", 7373));
-            employees.Add(new Janitor("William Harris", 7373));
+            employees.Add(new Janitor("Dillon Zetzer", 7337, "Answering Calls"));
+            employees.Add(new Janitor("William Harris", 7373, "ANswering Calls"));
         }
         public virtual void PatientCare(Patients patients)
         {
@@ -59,17 +65,17 @@ namespace MasteryHospital
         {
 
         }
-        public void EmployeeMenu(Employees employee)
+        public Employees EmployeeMenu()
         {
 
             int employeeNumber = 1;
-            foreach (Employees empployee in employees)
+            foreach (Employees employee in employees)
             {
                 Console.WriteLine($"{employeeNumber} {employee.name} {employee.id}");
                 employeeNumber++;
             }
-             
-            
+            return null;
+
         }
     }
 }

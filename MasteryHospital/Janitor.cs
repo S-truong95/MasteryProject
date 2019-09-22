@@ -7,8 +7,9 @@ namespace MasteryHospital
     class Janitor : Employees
     {
         public bool sweeping { get; set; }
-        public Janitor(string Name, int Number)
+        public Janitor(string Name, int Number, string Special)
         {
+            special = Special;
             sweeping = false;
             id = Number;
             name = Name;
